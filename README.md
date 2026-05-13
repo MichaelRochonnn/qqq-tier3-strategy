@@ -18,6 +18,17 @@ Suggested topics:
 qqq, tqqq, spy, vix, trading-strategy, codex-skill, risk-management
 ```
 
+Update the live GitHub About metadata with:
+
+```bash
+GH_TOKEN=... python3 scripts/update_github_about.py \
+  --repo MichaelRochonnn/qqq-tier3-strategy \
+  --description "Codex Skill for a SPY SMA200 + VIX tiered QQQ/TQQQ allocation monitor with daily Chinese signal reports." \
+  --topics "qqq,tqqq,spy,vix,trading-strategy,codex-skill,risk-management"
+```
+
+The token needs repository administration write access because GitHub treats About metadata and topics as repository settings.
+
 ## Strategy Logic
 
 The strategy uses SPY as the market-regime signal and trades TQQQ, QQQ, or cash.
@@ -76,6 +87,7 @@ The script fetches:
 
 - `SKILL.md`: Codex Skill instructions.
 - `scripts/qqq_tier3_signal.py`: executable signal monitor.
+- `scripts/update_github_about.py`: GitHub About/Topics updater.
 - `references/strategy-rules.md`: strategy rule reference.
 - `agents/openai.yaml`: UI metadata for Codex Skill discovery.
 
