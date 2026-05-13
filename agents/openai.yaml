@@ -1,0 +1,4 @@
+interface:
+  display_name: "QQQ Tier 3 Strategy"
+  short_description: "QQQ/TQQQ risk-tier strategy monitor"
+  default_prompt: "Use $qqq-tier3-strategy to compute today's QQQ/TQQQ allocation and explain the signal."
